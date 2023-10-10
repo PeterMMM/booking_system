@@ -19,7 +19,7 @@ use App\Http\Controllers\DriversController;
 Route::post('/signup',[AuthController::class,'signup']);
 Route::post('/signin',[AuthController::class,'signin']);
 
-Route::get('/drivers', [DriversController::class, 'index']);
+Route::get('/drivers', [DriversController::class, 'index'])->name('drivers.index');
 
 Route::post('/bookings',[BookingsController::class,'create']);
 Route::get('/bookings',[BookingsController::class,'index']);
