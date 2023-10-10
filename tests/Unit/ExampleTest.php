@@ -2,7 +2,8 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
+// use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
 {
@@ -11,10 +12,12 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_that_true_is_true()
-    {
-        $this->assertTrue(true);
 
-        $this->assertEquals(1,1);
+    public function test_check_check_driver()
+    {
+        // $this->assertTrue(true);
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
     }
 }
